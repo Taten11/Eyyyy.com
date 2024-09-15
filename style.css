@@ -1,0 +1,82 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #4682b4;
+}
+
+h1 {
+    color: #4682b4;
+}
+
+button {
+    padding: 20px 50px;  
+    margin: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button#yesBtn {
+    background-color: #4caf50;
+    color: white;
+}
+
+button#yesBtn:hover {
+    background-color: #45a049;
+}
+
+button#noBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+button#noBtn:hover {
+    background-color: #e53935;
+}
+
+#response {
+    margin-top: 20px;
+    font-size: 22px;
+    color: red;
+    font-weight: bold;
+}
+
+/* Hidden class for video initially */
+.hidden {
+    display: none;
+}
+
+#videoContainer {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 18px;
+    color: #4682b4;
+    font-weight: bold;
+}

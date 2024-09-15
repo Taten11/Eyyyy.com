@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inquiry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sir, magklase ka ugma?</h1>
+        <button id="yesBtn">Oo</button>
+        <button id="noBtn">Dili</button>
+        <p id="response"></p>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Hidden Video (will show after clicking "Dili") -->
+    <div id="videoContainer" class="hidden">
+        <video id="responseVideo" width="320" height="240" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Name at the bottom -->
+    <footer>
+        <p>eboranjustin</p>
+    </footer>
+
+    <script>
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const response = document.getElementById('response');
+        const videoContainer = document.getElementById('videoContainer');
+        const responseVideo = document.getElementById('responseVideo');
+
+        yesBtn.addEventListener('click', () => {
+            yesBtn.style.position = "absolute";
+            yesBtn.style.top = Math.random() * 300 + "px";
+            yesBtn.style.left = Math.random() * 300 + "px";
+        });
+
+        noBtn.addEventListener('click', () => {
+            response.textContent = "Thanks, bantay ka lang!";
+            videoContainer.classList.remove('hidden');  // Show video
+            responseVideo.play();  // Play video
+        });
+    </script>
+</body>
+</html>
